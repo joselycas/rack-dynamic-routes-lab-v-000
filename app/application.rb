@@ -10,8 +10,8 @@ class Application
         resp.write "#{item.price}\n"
         elsif req.path != (/items/)
          resp.status = 404
-         
-    end
-  end  
+      end
+      
+    end  
   end
 end
