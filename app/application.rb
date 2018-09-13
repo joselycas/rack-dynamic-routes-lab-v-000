@@ -12,6 +12,7 @@ class Application
         elsif req.path !~ (/items/)
          resp.write "Route not found"
          resp.status = 404
+         if 
       end
       resp.finish
   end
