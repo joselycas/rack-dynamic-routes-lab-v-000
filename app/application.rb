@@ -11,7 +11,7 @@ class Application
         elsif req.path != (/items/)
          resp.status = 404
       end
-      
+      resp.finish
     end  
   end
 end
