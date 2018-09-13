@@ -7,9 +7,9 @@ class Application
     
     if req.path.match(/items/)
       @@items.each do |item|
-        resp.write "#{item}\n"
+        resp.write "#{item.price}\n"
         elsif req.path != (/items/)
-         resp.write 
+         resp.status = 404
     end
   end  
   end
