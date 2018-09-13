@@ -8,13 +8,10 @@ class Application
     if req.path.match(/items/)
       item_name = req.path.split("/items/").last
       if item = @@items.detect{|i| i.name == item_name}
-      @@items.each do |item|
-        resp.write "#{item.price}\n"
-        
-      end
-        elsif req.path !~ (/items/)
-         resp.write "Route not found"
-         resp.status = 404
+        resp.write item.price
+      else 
+        resp.status = 400
+        resp.write "Route not found"
       end
       resp.finish
   end
