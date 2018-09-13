@@ -7,6 +7,7 @@ class Application
     
     if req.path == /items/
       @@items.each do |item|
+        binding.pry
         resp.write "#{item.price}\n"
       end
         elsif req.path !~ (/items/)
