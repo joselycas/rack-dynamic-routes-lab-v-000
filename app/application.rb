@@ -10,7 +10,7 @@ class Application
         resp.write "#{item.price}\n"
       end
         elsif req.path !~ (/items/)
-        resp.write "Route not found"
+         resp.write "Route not found"
          resp.status = 404
       end
       resp.finish
