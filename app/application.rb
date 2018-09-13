@@ -13,7 +13,7 @@ class Application
         resp.status = 400
         resp.write "Route not found"
       end
-      
+     else  
       resp.finish
   end
 end
