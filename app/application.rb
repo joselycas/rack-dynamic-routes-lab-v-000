@@ -8,7 +8,8 @@ class Application
     if req.path.match(/items/)
       @@items.each do |item|
         resp.write "#{item}\n"
-        elsif req.path != 
+        elsif req.path != (/items/)
+         resp.write 
     end
   end  
   end
